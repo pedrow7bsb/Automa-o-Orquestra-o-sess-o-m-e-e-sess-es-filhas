@@ -39,4 +39,3 @@ Este projeto demonstra a capacidade de ir além de *prompts* simples, construind
 ## 🛠️ Metodologia
 Construído com base em TDD (*Test-Driven Development*) rigoroso. O ciclo de vida da automação obriga que o critério de pronto seja definido e testado (vermelho) antes de qualquer linha de código de implementação ser gerada e validada (verde), com a suíte inteira rodando regressivamente a cada ciclo.
 
-*Autor: Bruno Neves.*
