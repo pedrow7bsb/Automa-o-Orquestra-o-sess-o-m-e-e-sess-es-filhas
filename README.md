@@ -1,4 +1,4 @@
-# 🧠 Orquestração de Agentes: Arquitetura de Sessão Mãe e Filhas
+#  Orquestração de Agentes: Arquitetura de Sessão Mãe e Filhas
 
 **Resumo Executivo:** Design e implementação de uma arquitetura hierárquica de agentes de IA para resolver problemas de sobrecarga de contexto. O sistema utiliza um modelo de "Sessão Mãe" para planejamento e priorização, que delega tarefas para "Sessões Filhas" especializadas, garantindo execução paralela, testes automatizados e passagem de bastão (handoff) sem perda de informações.
 
@@ -6,10 +6,10 @@
 
 ---
 
-## 🚩 O Desafio Operacional (A Dor)
+##  O Desafio Operacional (A Dor)
 Na automação de fluxos de trabalho complexos, depender de um único agente de IA cria um gargalo crítico: um agente com contexto demais no prompt começa a alucinar, erra instruções e esquece etapas anteriores. O gerenciamento de múltiplas frentes de trabalho exige uma orquestração robusta, onde a inteligência seja fragmentada e especializada por repositório, sem perder a visão global do projeto.
 
-## 💡 Arquitetura e Fluxograma da Solução
+##  Arquitetura e Fluxograma da Solução
 
 O sistema foi desenhado como uma esteira de produção de software e tarefas operacionais, orquestrando diferentes modelos de IA em papéis distintos (Planejador vs. Executor).
 
@@ -24,7 +24,7 @@ O sistema foi desenhado como uma esteira de produção de software e tarefas ope
    * **Validação (Loop de Qualidade):** O fluxo entra em um nó de decisão ("Suíte verde?"). O executor tenta implementar até os testes passarem. O agente planejador confere o sucesso rodando a suíte e lendo o *diff* do código, nunca confiando apenas no relato do executor.
 4. **Fechamento e Handoff (Human-in-the-loop):** Com a suíte verde, a Sessão Filha devolve um relato curto com provas para a Sessão Mãe. O dono do projeto aprova a execução, o que engatilha a publicação/fechamento da tarefa e a geração do "Handoff do dia" consolidado para que a sessão de amanhã assuma o trabalho sem quebrar o fluxo.
 
-## 📈 Impacto de Negócios e Orquestração (AI Builder)
+##  Impacto de Negócios e Orquestração (AI Builder)
 
 Este projeto demonstra a capacidade de ir além de *prompts* simples, construindo verdadeiros sistemas multiagentes (*Agentic Workflows*):
 
@@ -36,6 +36,6 @@ Este projeto demonstra a capacidade de ir além de *prompts* simples, construind
 
 ---
 
-## 🛠️ Metodologia
+##  Metodologia
 Construído com base em TDD (*Test-Driven Development*) rigoroso. O ciclo de vida da automação obriga que o critério de pronto seja definido e testado (vermelho) antes de qualquer linha de código de implementação ser gerada e validada (verde), com a suíte inteira rodando regressivamente a cada ciclo.
 
